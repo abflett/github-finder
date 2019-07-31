@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import UserItem from "./UserItem";
 
 class Users extends Component {
   state = {
@@ -169,28 +170,19 @@ class Users extends Component {
 
   render() {
     return (
-      <div>
-        {this.state.users.map(({ id, login, avatar_url, html_url }) => {
-          return (
-            <div key={id} className="card text-center">
-              <img
-                src={avatar_url}
-                alt=""
-                className="round-img"
-                style={{ width: 60 }}
-              />
-              <h3>{login}</h3>
-              <div>
-                <a href={html_url} className="btn btn-dark btn-sm my-1">
-                  More
-                </a>
-              </div>
-            </div>
-          );
+      <div style={userStyle}>
+        {this.state.users.map(user => {
+          return <UserItem user={user} key={user.id} />;
         })}
       </div>
     );
   }
 }
+
+const userStyle = {
+  display: "grid",
+  gridTemplateColumns: "repeat(3, 1fr)",
+  gap: "1rem"
+};
 
 export default Users;
