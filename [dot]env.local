@@ -1,0 +1,6 @@
+REACT_APP_GITHUB_CLIENT_ID="your-api-key"
+REACT_APP_GITHUB_CLIENT_SECRET="your-secret-api-key"
+
+// change the <[dot]env.local> to <.env.local>
+// put in your keys from <https://github.com/settings/developers> - OAuth Apps
+// remove these comments

@@ -6,7 +6,7 @@ const Spinner = () => (
     <img
       src={spinner}
       alt="Loading..."
-      sytle={{
+      style={{
         width: "256px",
         margin: "auto",
         display: "block"
