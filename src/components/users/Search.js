@@ -1,14 +1,32 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 
 class Search extends Component {
-  static propTypes = {};
+  state = {
+    text: " "
+  };
+
+  onChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
+
+  onSubmit = e => {
+    e.preventDefault();
+    console.log(this.state.text);
+  };
 
   render() {
     return (
       <div>
-        <form className="form">
-          <input type="text" name="text" placeholder="Search users..." />
+        <form onSubmit={this.onSubmit} className="form">
+          <input
+            type="text"
+            name="text"
+            placeholder="Search users..."
+            value={this.state.text}
+            onChange={this.onChange}
+          />
           <input
             type="submit"
             value="Search"
