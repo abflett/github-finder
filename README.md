@@ -1,3 +1,7 @@
+## Github Finder
+
+Find users on Github. This project uses the Github API to find users and provide information on Github.
+
 This project was created following a tutorial from Udemy: [React Front to Back - 2019](https://www.udemy.com/modern-react-front-to-back/).
 
 ## Setup your .env.local file
